@@ -1,23 +1,17 @@
 
 import Foundation
 
-// MARK: - BankAccount Class
 
 public class BankAccount {
 
-    // Private property: Cannot be accessed outside this class
     private var balance: Double
 
-    // Public property: Can be accessed outside the class
     public let accountHolder: String
 
-    // Fileprivate property: Accessible within this file
     fileprivate var bankName: String = "Swift Bank"
 
-    // Internal property: Accessible within the same module
     internal var accountType: String = "Savings"
 
-    // MARK: Initializer
 
     public init(accountHolder: String, initialBalance: Double) {
 
@@ -31,7 +25,6 @@ public class BankAccount {
         }
     }
 
-    // MARK: Deposit
 
     public func deposit(amount: Double) {
 
@@ -43,7 +36,6 @@ public class BankAccount {
         }
     }
 
-    // MARK: Withdraw
 
     public func withdraw(amount: Double) {
 
@@ -57,13 +49,11 @@ public class BankAccount {
         }
     }
 
-    // MARK: Display Balance
 
     public func displayBalance() {
         print("Current Balance: ₹\(balance)")
     }
 }
-// Demonstrating fileprivate access
 public func displayBankInfo() {
     print("Bank Name:", bankName)
 }
